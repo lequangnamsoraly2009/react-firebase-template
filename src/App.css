@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+/**** Basic CSS Reset ****/
+* {
+  box-sizing: border-box;
+  font-family: var(--font-brand);
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+*:visited {
+  color: var(--clr-brand);
+}
+
+/**** Colors ****/
+:root {
+  /* Background Color */
+  --clr-background: #ffffff;
+
+  /* Brand Color */
+  --clr-brand: #3d405b;
+
+  /* Accent Color */
+  --clr-accent: #e07a5f;
+
+  /* Headings Color */
+  --clr-headings: #3d405b;
+
+  /* Primary Text Color */
+  --clr-primary-text: #3d405b;
+
+  /* Secondary Text Color */
+  --clr-secondary-text: #ffffff;
+
+  /* Success Color */
+  --clr-success: #16a34a;
+  --clr-success-light: #bbf7d0;
+
+  /* Danger Color */
+  --clr-danger: #dc2626;
+  --clr-danger-light: #fecaca;
+
+  /* Brand Font */
+  --font-brand: 'Poppins', sans-serif;
+
+  /* Supporting Font */
+  /* --font-supporting: TBD; */
+
+  /* Font Weights */
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-heavy: 600;
+
+  /* Font Sizes */
+  --font-size-0-5: 0.5rem;
+  --font-size-0-75: 0.75rem;
+  --font-size-0-875: 0.875rem;
+  --font-size-1: 1rem;
+  --font-size-1-125: 1.125rem;
+  --font-size-1-25: 1.25rem;
+  --font-size-1-5: 1.5rem;
+  --font-size-1-75: 1.75rem;
+  --font-size-2: 2rem;
+  --font-size-2-5: 2.5rem;
+  --font-size-3: 3rem;
+  --font-size-4: 4rem;
+  --font-size-5: 5rem;
+  --font-size-8: 8rem;
+
+  /* Spacing */
+  --space-0-125: 0.125rem;
+  --space-0-25: 0.25rem;
+  --space-0-5: 0.5rem;
+  --space-0-75: 0.75rem;
+  --space-1: 1rem;
+  --space-1-5: 1.5rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-6: 6rem;
+  --space-8: 8rem;
+  --space-10: 10rem;
+  --space-12: 12rem;
+
+  /* Box Shadows */
+  --box-shadow: 0.125rem 0.75rem 0.75rem rgba(200, 200, 200, 0.75);
+  --box-shadow-inset: inset 0.125rem 0.25rem 0.5rem rgba(200, 200, 200, 0.75);
+  --box-shadow-button: 0.125rem 0.125rem var(--clr-accent);
+
+  /* Border Radius */
+  --border-radius: var(--space-0-5);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.App {
+  animation: fadeIn 0.75s ease-in;
+  background-color: var(--clr-background);
+  min-height: 100vh;
+  padding-bottom: var(--space-1);
+}
