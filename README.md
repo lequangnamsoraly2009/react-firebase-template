@@ -191,7 +191,7 @@ export default configureStore({
 
 ### App.jsx
 
-- (onAuthStateChanged)[https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#onauthstatechanged]
+- [onAuthStateChanged](https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#onauthstatechanged)
 
 ```javascript
 import React, { useEffect } from 'react';
@@ -245,6 +245,8 @@ export default function App() {
 ```
 
 ## CSS Custom Properties
+
+- [Custom properties (--\*): CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 
 ### App.css
 
