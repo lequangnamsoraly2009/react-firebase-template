@@ -69,18 +69,16 @@ import {
 export const signUp = createAsyncThunk('user/signUp', async ({ submittedEmail, submittedPassword }) => {
   const userCredential = await createUserWithEmailAndPassword(firebaseAuth, submittedEmail, submittedPassword);
 
-  const uid = userCredential.user.uid;
-  const email = userCredential.user.email;
-  const displayName = userCredential.user.displayName;
+  const { uid, email, displayName } = userCredential.user;
+
   return { uid, email, displayName };
 });
 
 export const signIn = createAsyncThunk('user/signIn', async ({ submittedEmail, submittedPassword }) => {
   const userCredential = await signInWithEmailAndPassword(firebaseAuth, submittedEmail, submittedPassword);
 
-  const uid = userCredential.user.uid;
-  const email = userCredential.user.email;
-  const displayName = userCredential.user.displayName;
+  const { uid, email, displayName } = userCredential.user;
+
   return { uid, email, displayName };
 });
 
