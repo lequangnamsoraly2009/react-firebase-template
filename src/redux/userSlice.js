@@ -16,9 +16,9 @@ export const signUp = createAsyncThunk(
       submittedEmail,
       submittedPassword,
     );
-    const uid = userCredential.user.uid;
-    const email = userCredential.user.email;
-    const displayName = userCredential.user.displayName;
+
+    const { uid, email, displayName } = userCredential.user;
+
     return { uid, email, displayName };
   }
 );
@@ -31,9 +31,9 @@ export const signIn = createAsyncThunk(
       submittedEmail,
       submittedPassword
     );
-    const uid = userCredential.user.uid;
-    const email = userCredential.user.email;
-    const displayName = userCredential.user.displayName;
+
+    const { uid, email, displayName } = userCredential.user;
+
     return { uid, email, displayName };
   }
 );

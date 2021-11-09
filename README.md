@@ -213,11 +213,11 @@ export default function App() {
   useEffect(() => {
     onAuthStateChanged(firebaseAuth, async (user) => {
       if (user) {
-        const uid = user.uid;
-        const email = user.email;
-        const displayName = user.displayName;
-        dispatch(setUser({ uid, email, displayName }));
         try {
+          const { uid, email, displayName } = user;
+
+          dispatch(setUser({ uid, email, displayName }));
+
           const allUserData = await dispatch(getUser(uid));
         } catch (error) {
           console.error(error);
